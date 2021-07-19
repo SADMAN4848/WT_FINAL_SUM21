@@ -8,7 +8,7 @@
 <table>
 	
 	<td>
-		<form class="form-horizontal form-material">
+		<form action="" method="post" class="form-horizontal form-material">
 			<div class="form-group">
 			<h4 class="text">Name:</h4> 
 			<input type="text" name="s_name" value ="<?php echo $pr["s_name"];?>" class="form-control">

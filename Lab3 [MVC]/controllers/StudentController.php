@@ -42,7 +42,7 @@
 	function updateStudent($s_name,$s_id,$s_dob, $s_credit,$s_cgpa,$dept_id){
 		$query="update student set s_name='$s_name',s_id='$s_id',s_dob='$s_dob',s_credit='$s_credit',s_cgpa='$s_cgpa',dept_id='$dept_id' where s_id='$s_id'";
 		return execute($query);
-		echo "update 2";
+		
 		
 		
 	}

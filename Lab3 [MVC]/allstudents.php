@@ -8,9 +8,9 @@
 	<h3 class="text">All Students</h3>
 	<table class="table table-striped">
 		<thead>
-			<th>Sl#</th>
+			<th> Name</th>
 			<th> ID</th>
-			<th>Date of Birth </th>
+			<th>DOB </th>
 			<th> Credit</th>
 			<th> CGPA</th>
 			<th> Department</th>
@@ -21,10 +21,10 @@
 		<tbody>
 			<?php
 				$students = getStudents();
-				$i=1;
+				
 				foreach($students as $p){
 					echo "<tr>";
-						echo "<td>$i</td>";
+						
 						echo "<td>".$p["s_name"]."</td>";
 						echo "<td>".$p["s_id"]."</td>";
 						echo "<td>".$p["s_dob"]."</td>";
@@ -34,7 +34,7 @@
 						echo '<td><a href="editstudent.php?s_id='.$p["s_id"].'" class="btn btn-success">Edit</a></td>';
 						echo '<td><a class="btn btn-danger">Delete</td>';
 					echo "</tr>";
-					$i++;
+					
 				}
 			?>
 			
