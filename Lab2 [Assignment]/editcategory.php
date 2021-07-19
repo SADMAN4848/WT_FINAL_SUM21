@@ -10,7 +10,7 @@
 		<div action="" method="post">
 			<h4>Name</h4>
 			<input type="hidden" name="id" value ="<?php echo $c["id"];?>">
-			<input type ="text" name="catName" value="<?php  $c["catName"];?>" >
+			<input type ="text" name="catName" value="<?php echo $c["catName"];?>" >
 		</div>
 		
 		<div>

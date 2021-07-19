@@ -18,18 +18,28 @@
 	if(!$hasError){
 			$rs = insertCategory($catName);
 			if($rs === true){       
-				header("Location: HOMEPAGE.php");
+				header("Location: addcategory.php");
 			}
 			$err_db = $rs;
 		}
 	}
 	else if (isset($_POST["edit_category"])){
-		
-            $rs = updateCategory($_POST["catName"],$_POST["id"]);
+		if(empty($_POST["catName"])){
+            $hasError = true;
+            $err_name = "*Category name Empty";
+        }
+        
+        else{
+             $catName = $_POST["catName"];
+        }
+		if(!$hasError){
+			$rs = updateCategory($_POST["catName"],$_POST["id"]);
 			if($rs===true){
 				header("Location : allcategories.php");
-		}
-		$err_db = $rs;
+			}
+			$err_db = $rs;
+        }
+            
 	
 	}
 	
