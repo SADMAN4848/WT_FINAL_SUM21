@@ -6,14 +6,12 @@
 
 <div class="center">
 <table>
-	<td>
-		<img class="item-image" src="<?php echo $pr["img"];?>"></img>
-	</td>
+	
 	<td>
 		<form class="form-horizontal form-material">
 			<div class="form-group">
 			<h4 class="text">Name:</h4> 
-			<input type="text" name="s_name" class="form-control">
+			<input type="text" name="s_name" value ="<?php echo $pr["s_name"];?>" class="form-control">
 		</div>
 		
 		<div class="form-group">
@@ -41,7 +39,7 @@
 				
 			<div class="form-group text-center">
 				
-				<input type="submit" class="btn btn-success" value="Edit Student" class="form-control">
+				<input type="submit" name= "edit_student" class="btn btn-success" value="Edit Student" class="form-control">
 			</div>
 		</form>
 	</td>

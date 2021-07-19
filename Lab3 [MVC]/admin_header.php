@@ -6,15 +6,15 @@
 	</head>
 	<body>
 		<div class="text-center">
-			<h1 class="header">Admin</h1>
+			<h1 class="header">Admin Panel</h1>
 		</div>
 		<!--menu starts-->
 		<div class="text-center">
-			<a href="dashboard.php" class="btn btn-primary">Dashboard</a>
-			<a href="allproducts.php" class="btn btn-warning">All Products</a>
-			<a href="addproduct.php" class="btn btn-danger">Add Product</a>
-			<a href="allcategories.php" class="btn btn-warning">All Categories</a>
-			<a href="addcategory.php" class="btn btn-info">Add Category</a>
-			<a href="index.php" class="btn btn-danger">Logout</a>		
+			
+			<a href="allstudents.php" class="btn btn-warning">All Students</a>
+			<a href="addstudent.php" class="btn btn-danger">Add Student</a>
+			<a href="allcategories.php" class="btn btn-warning">All Departments</a>
+			<a href="addcategory.php" class="btn btn-info">Add Department</a>
+			<a href="login.php" class="btn btn-danger">Logout</a>		
 		</div>
 		<!--menu ends-->

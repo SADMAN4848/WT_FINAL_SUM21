@@ -4,7 +4,7 @@
 	$a_uname="";
 	$err_a_uname="";
 	$a_pass="";
-	$err_pass="";
+	$err_a_pass="";
 	$err_db="";
 	$hasError=false;
 	

@@ -1,7 +1,7 @@
 <?php include 'admin_header.php';
 	require_once 'controllers/StudentController.php';
-	require_once 'controllers/DeptController.php';
-	$categories = getAllDept();
+	
+	
 ?>
 <!--addproduct starts -->
 <div class="center">
@@ -17,36 +17,9 @@
 			<input type="text" name="s_id" class="form-control">
 		</div>
 		
-		<div class="form-group><div class="form-group">
+		<div class="form-group">
 			<h4 class="text">Date of Birth:</h4> 
-			<select name="s_dob_date" class="form-control">
-				<option disabled selected>Choose</option>
-				<?php
-					for($i=1;$i<=31;$i++){
-							echo "<option>$i</option>";	
-					}
-				?>
-			</select>
-			<select name="s_dob_month" class="form-control">
-				<option disabled selected>Choose</option>
-				<?php
-					$months = array("January","February","March","April","May","June","July","August","September","October","November","December");
-					foreach($months as $m){
-									if($m == $month)
-										echo "<option selected>$m</option>";
-									else
-										echo "<option>$m</option>";
-								}
-				?>
-			</select>
-			<select name="s_dob_year" class="form-control">
-				<option disabled selected>Choose</option>
-				<?php
-					for($i=1990;$i<=2021;$i++){
-						echo "<option>$i</option>";	
-					}
-				?>
-			</select>
+			<input type="text" name="s_dob" class="form-control">
 		</div>
 		<div class="form-group">
 			<h4 class="text">Credit:</h4> 
