@@ -3,7 +3,7 @@
 	
 	$err_db="";
 	if(isset($_POST["add_student"])){
-		echo "submiited";
+		
 		$rs = insertStudent($_POST["s_name"],$_POST["s_id"],$_POST["s_dob"],$_POST["s_credit"],$_POST["s_cgpa"],$_POST["dept_id"]);
 		if($rs === true){
 			header("Location: allstudents.php");

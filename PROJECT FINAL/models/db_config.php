@@ -2,7 +2,7 @@
 	$db_server = "localhost";
 	$db_uname = "root";
 	$db_pass = "";
-	$db_name = "mvc";
+	$db_name = "webtech_final_project";
 	
 	function execute($query){
 		global $db_server,$db_uname,$db_pass,$db_name;
