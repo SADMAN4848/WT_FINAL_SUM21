@@ -1,23 +1,33 @@
 <?php include 'headers/homepage_header.php';
 ?>  
   
-  
-</ul>
-			
-	<h1 class="text">Get Started!</h1> 						
+		
+	<br><br>
+	<div>
+	<center>
+		<img id="photo" src="javaScripts/slideshow/1Mirpur.jpg"><br><br>
+		<button onclick="pic1()" class="btn-search">1</button>
+		<button onclick="pic2()" class="btn-search">2</button>
+		<button onclick="pic3()" class="btn-search">3</button>
+		<button onclick="pic4()" class="btn-search">4</button>
+		<button onclick="pic5()" class="btn-search">5</button>
+		<button onclick="pic6()" class="btn-search">6</button>
+		<button onclick="pic7()" class="btn-search">7</button>
+		<button onclick="pic8()" class="btn-search">8</button>
+		<button onclick="pic9()" class="btn-search">9</button>
+		
+		
+		<script src = "javaScripts/myjs.js"></script>
+	</center>
+	</div>
+	
+	<h1 class="textBlue">Get Started!</h1> 						
 			
 			<h3 class="text">New here? <a href="SignupWhere.php" class="btn-success">Sign up</a></h3>
 			<h3 class="text">Already have an account? <a href="SigninWhere.php" class="btn-success">Sign in</a></h3>           
-	<br><br>
-	<h2 style="font-family: Arial">Top Properties</h2> 
 	
-	<img src="gulshan.jpg" align="center"></center><br>
-	<h4 style="font-family: Arial">1500 Sqft Full-Furnished Apartment, Gulshan</h4>
-	<h1><a href='http://localhost/WT_D/Lab5[Project]/Booking_info.php'><button>Book Now</button></a>&nbsp;<a href="http://localhost/WT_D/Lab5[Project]/Payment.php"><button>Payment</button></a></h1><br>
 	
-	<img src="banani.jpg" align="center"></center><br>
-	<h4 style="font-family: Arial">2000 Sqft Duplex House, Banani</h4>
-	<h1><a href='http://localhost/WT_D/Lab5[Project]/Booking_info.php'><button>Book Now</button></a>&nbsp;<a href="http://localhost/WT_D/Lab5[Project]/Payment.php"><button>Payment</button></a></h1>
+
 	
 	<h1 style="font-family: Arial">Be a real estate agent!</h1><img src="agent.png" align="center"><h2><a href="http://localhost/WT_D/Lab5[Project]/JobApp.php">Apply here</a></h2><br>
 	

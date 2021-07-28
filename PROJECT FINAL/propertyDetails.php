@@ -13,13 +13,13 @@
 			
 				foreach($properties as $p){
 					
-						
+						echo "<img src='".$p["p_photo"]."'";
+						echo"<br><br><br><br>";
 						echo "Property Type: "; echo $p["p_type"]; echo"<br>";
 						echo "Area: ";echo $p["p_area"];echo"<br>";
 						echo "Location: ";echo $p["p_location"];echo"<br>";
 						echo "Price: ";echo $p["p_price"];echo"<br>";
 						echo "Description: ";echo $p["p_description"];echo"<br>";
-						echo "Photo: ";echo $p["p_photo"];echo"<br>";
 						echo "Property Owner: ";echo $p["h_name"];echo"<br>";
 						echo "<br>";
 						echo '<tr><a href="bookProperty.php?p_id='.$p["p_id"].'" class="btn-success">Request Booking</a></tr>';

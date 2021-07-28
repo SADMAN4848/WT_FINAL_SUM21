@@ -46,6 +46,13 @@ body{
 	color:grey;
 	
 }
+
+.textBlue{
+	font-family:arial;
+	color:#03256C;
+	
+}
+
 .text-white{
 	font-family:consolas;
 	color:white;
@@ -174,6 +181,7 @@ body{
 				text-decoration:none;
 				border-radius:3px;
 			}
+			
 		
 .btn{
 	font-family:consolas;

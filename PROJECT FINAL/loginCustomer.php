@@ -1,8 +1,8 @@
 <?php include 'headers/homepage_header.php';
 	include 'controllers/CustomerController.php';
+	
 ?>
 
-<!--login starts -->
 <div class="center-login">
 	<h1 class="text">Customer Login</h1>
 	<h5><?php echo $err_db;?></h5>
