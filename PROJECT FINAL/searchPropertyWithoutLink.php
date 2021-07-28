@@ -1,6 +1,6 @@
 <?php 
 	
-	include 'admin_header_withoutlink.php';
+	include 'headers/admin_header_withoutlink.php';
 	require_once 'controllers/PropertiesController.php';
 ?>
 
@@ -14,7 +14,7 @@
 			<option>Select type</option>
 								
 			<?php
-			$all_types = array('Flat','House','Plot');
+			$all_types = array('For Sell','For Rent');
 			foreach($all_types as $m){
 			if($m == $p_type)
 				echo "<option selected>$m</option>";
@@ -23,9 +23,23 @@
 								}
 			?>
 			</select>
+			<select name="p_category">
+			<option>Select categoty</option>
+								
+			<?php
+			$all_categoty = array('Flat','House','Plot');
+			foreach($all_categoty as $n){
+			if($m == $p_type)
+				echo "<option selected>$n</option>";
+			else
+				echo "<option>$n</option>";
+								}
+			?>
+			</select>
 		
 			
 			<input type="submit" name="btn_search" class="btn-search" value="Search" >
+			<span style="color:red"><?php echo $err_p_location; ?></span>
 		</div>
 		
 	</form>

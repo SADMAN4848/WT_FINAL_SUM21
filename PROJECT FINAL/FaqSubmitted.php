@@ -1,4 +1,4 @@
-<?php include 'admin_header_withoutlink.php';
+<?php include 'headers/admin_header_withoutlink.php';
 ?>
 
 <div class="center">

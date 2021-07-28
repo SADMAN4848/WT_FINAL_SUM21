@@ -2,6 +2,6 @@
 ?>
 
 <div class="center">
-  <center> <img src="images/submitted.jpg"></center>
+  <center> <img src="images/ProfileUpdated.jpg"></center>
   </div>
 <?php include 'admin_footer.php';?>

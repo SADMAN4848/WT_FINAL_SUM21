@@ -1,4 +1,4 @@
-<?php include 'admin_header_withoutlink.php';
+<?php include 'headers/admin_header_withoutlink.php';
 	require_once 'controllers/CustomerController.php';
 	require_once 'controllers/HouseholderController.php';
 	$h_id=$_GET["h_id"];
@@ -12,16 +12,16 @@
 	<form action="" method="post" class="">
 		<div class="form-group">
 			<h4 class="text">Enter Your Username:</h4> 
-			<input type="text" name="c_uname" class="form-control">
+			<input type="text" name="c_uname" class="form-control"><span style="color:red"><?php echo $err_c_uname; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Review Details:</h4> 
-			<input type="text" name="r_details" class="form-control">
+			<input type="text" name="r_details" class="form-control"><span style="color:red"><?php echo $err_r_details; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Rate Householder:</h4> 
-			<input type="text" name="r_rating" class="form-control">
+			<input type="text" name="r_rating" class="form-control"><span style="color:red"><?php echo $err_r_rating; ?></span>
 		</div>
 		
 		<div>

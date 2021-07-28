@@ -1,4 +1,4 @@
-<?php include 'admin_header.php';
+<?php include 'headers/admin_header_withoutlink.php';
 	require_once 'controllers/CustomerController.php';
 	$c_uname = $_GET["c_uname"];
 	$pr= getCustomerWithUsername($c_uname);
@@ -44,7 +44,7 @@
 	<form action="" method="post" class="">
 		<div class="form-group">
 			<h4 class="text">Your Question:</h4> 
-			<input type="text" name="f_details" class="form-control">
+			<input type="text" name="f_details" class="form-control"><span style="color:red"><?php echo $err_f_details; ?></span>
 		</div>
 		
 		

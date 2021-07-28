@@ -1,4 +1,4 @@
-<?php include 'admin_header.php';
+<?php include 'headers/admin_header_withoutlink.php';
 	require_once 'controllers/CustomerController.php';
 	$c_uname = $_GET["c_uname"];
 	$pr= getCustomerWithUsername($c_uname);
@@ -11,16 +11,16 @@
 	<form action="" method="post" class="">
 		<div class="form-group">
 			<h4 class="text">Name:</h4> 
-			<input type="text" name="c_name" class="form-control" value ="<?php echo $pr["c_name"];?>">
+			<input type="text" name="c_name" class="form-control" value ="<?php echo $pr["c_name"];?>"><span style="color:red"><?php echo $err_c_name; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Username:</h4> 
-			<input type="text" name="c_uname" class="form-control" value ="<?php echo $pr["c_uname"];?>">
+			<input type="text" name="c_uname" class="form-control" value ="<?php echo $pr["c_uname"];?>"><span style="color:red"><?php echo $err_c_uname; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Password:</h4> 
-			<input type="password" name="c_pass" class="form-control" value ="<?php echo $pr["c_pass"];?>">
+			<input type="password" name="c_pass" class="form-control" value ="<?php echo $pr["c_pass"];?>"><span style="color:red"><?php echo $err_c_pass; ?></span>
 		</div>
 		
 		<div class="form-group">
@@ -32,8 +32,8 @@
 										echo "<option>$i</option>";	
 									}
 								?>
-								</select>
-							<!-- <span style="color:red"><php echo $err_day; ?></span> -->
+								</select><span style="color:red"><?php echo $err_c_dob_day; ?></span>
+							
 							<select name="c_dob_month">
 								<option>Month</option>
 								
@@ -46,8 +46,8 @@
 										echo "<option>$m</option>";
 								}
 							?>
-							</select>
-							<!--<span style="color:red"><php echo $err_month; ?></span> -->
+							</select><span style="color:red"><?php echo $err_c_dob_month; ?></span>
+							
 							
                             <select name="c_dob_year">
 								<option>Year</option>
@@ -57,31 +57,31 @@
 										echo "<option>$i</option>";	
 									}
 								?>
-							</select>
+							</select><span style="color:red"><?php echo $err_c_dob_year; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Gender:</h4> 
-			<input type="radio" value="Male" name="c_gender">Male<input type="radio" value="Female" name="c_gender">Female
+			<input type="radio" value="Male" name="c_gender">Male<input type="radio" value="Female" name="c_gender">Female<span style="color:red"><?php echo $err_c_gender; ?></span>
 			
 		</div>
 		<div class="form-group">
 			<h4 class="text">Email:</h4> 
-			<input type="text" name="c_email" class="form-control" value ="<?php echo $pr["c_email"];?>">
+			<input type="text" name="c_email" class="form-control" value ="<?php echo $pr["c_email"];?>"><span style="color:red"><?php echo $err_c_email; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Address:</h4> 
-			<input type="text" name="c_address" class="form-control" value ="<?php echo $pr["c_address"];?>">
+			<input type="text" name="c_address" class="form-control" value ="<?php echo $pr["c_address"];?>"><span style="color:red"><?php echo $err_c_address; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Phone No:</h4> 
-			<input type="text" name="c_phone" class="form-control" value ="<?php echo $pr["c_phone"];?>">
+			<input type="text" name="c_phone" class="form-control" value ="<?php echo $pr["c_phone"];?>"><span style="color:red"><?php echo $err_c_phone; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">NID No:</h4> 
-			<input type="text" name="c_nid" class="form-control" value ="<?php echo $pr["c_nid"];?>">
+			<input type="text" name="c_nid" class="form-control" value ="<?php echo $pr["c_nid"];?>"><span style="color:red"><?php echo $err_c_nid; ?></span>
 		</div>
 		<div class="form-group">
 			<input type="hidden" name="c_id" class="form-control" value ="<?php echo $pr["c_id"];?>">

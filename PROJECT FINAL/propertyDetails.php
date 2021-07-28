@@ -1,4 +1,4 @@
-<?php include 'admin_header_withoutlink.php';
+<?php include 'headers/admin_header_withoutlink.php';
 	require_once 'controllers/PropertiesController.php';
 	$p_id = $_GET["p_id"];
 ?>

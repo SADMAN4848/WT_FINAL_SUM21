@@ -1,4 +1,4 @@
-<?php include 'admin_header_withoutlink.php';
+<?php include 'headers/admin_header_withoutlink.php';
 	require_once 'controllers/PropertiesController.php';
 	$p_location = $_GET["p_location"];
 	$p_type = $_GET["p_type"];

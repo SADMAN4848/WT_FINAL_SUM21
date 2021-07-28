@@ -16,3 +16,4 @@
   <li><a href="topPropertiesForHomepage.php" class="btn btn-warning">Top Properties</a></li>
   <li><a href="loginCustomer.php" class="btn btn-warning">Sign In</a></li>
   <li><a href="" class="btn btn-warning">About Us</a></li>
+ </ul>

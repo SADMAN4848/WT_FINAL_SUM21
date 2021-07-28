@@ -1,6 +1,6 @@
 <?php 
 	$c_uname=$_GET["c_uname"];
-	include 'admin_header.php';
+	include 'headers/admin_header.php';
 	require_once 'controllers/PropertiesController.php'; 
 	$pr= getCustomerWithUsername($c_uname);
 ?>
@@ -24,8 +24,8 @@
 								}
 			?>
 			</select>
-			<select name="p_categoty">
-			<option>Select type</option>
+			<select name="p_category">
+			<option>Select categoty</option>
 								
 			<?php
 			$all_categoty = array('Flat','House','Plot');
@@ -40,6 +40,7 @@
 		
 			
 			<input type="submit" name="btn_search" class="btn-search" value="Search" >
+			<span style="color:red"><?php echo $err_p_location; ?></span>
 		</div>
 		
 	</form>

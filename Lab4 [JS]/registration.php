@@ -1,6 +1,11 @@
 <html>
 	<head></head>
 	<body>
+	<script>
+	var string1 = "demo";
+    var intvalue = 30;
+    alert( string1 + intvalue );
+	</script>
 		<form>
 			<input id="uname" onkeyup="writeOp(this)" type="text" placeholder="Username"><br>
 			<span id="op"></span><br>

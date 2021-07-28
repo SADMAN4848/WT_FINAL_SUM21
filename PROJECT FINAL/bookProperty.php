@@ -1,4 +1,4 @@
-<?php include 'admin_header_withoutlink.php';
+<?php include 'headers/admin_header_withoutlink.php';
 	require_once 'controllers/CustomerController.php';
 	$p_id=$_GET["p_id"];
 	$pr=getPropery($p_id);
@@ -11,11 +11,11 @@
 	<form action="" method="post" enctype="multipart/form-data" class="form-horizontal form-material">
 		<div class="">
 			<h4 class="text">Enter Your Username:</h4> 
-			<input type="text" name="c_uname" class="">
+			<input type="text" name="c_uname" class=""><span style="color:red"><?php echo $err_c_uname; ?></span>
 		</div>
 		<div class="">
 			<h4 class="text">Enter Your Password:</h4> 
-			<input type="password" name="c_pass" class="">
+			<input type="password" name="c_pass" class=""><span style="color:red"><?php echo $err_c_pass; ?></span>
 		</div>
 		<div>
 		<input type="hidden" name="p_id" class="form-control" value="<?php echo $pr["p_id"];?>" >      
