@@ -1,4 +1,7 @@
-<?php include 'headers/admin_header_withoutlink.php';
+<?php include 'headers/admin_header.php';
+if(!isset($_SESSION["loggedCustomer"])){
+		header("Location: loginCustomer.php");
+	}
 ?>
 
 <div class="center">

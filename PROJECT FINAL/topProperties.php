@@ -1,7 +1,11 @@
 <?php 
-	
-	include 'headers/admin_header_withoutlink.php';
+	session_start();
+	if(!isset($_SESSION["loggedCustomer"])){
+		header("Location: loginCustomer.php");
+	}
+	include 'headers/admin_header.php';
 	require_once 'controllers/PropertiesController.php'; 
+	
 	
 ?>
 

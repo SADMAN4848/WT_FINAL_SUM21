@@ -1,5 +1,9 @@
-<?php include 'headers/admin_header_withoutlink.php';
+<?php include 'headers/admin_header.php';
 	require_once 'controllers/PropertiesController.php';
+	session_start();
+	if(!isset($_SESSION["loggedCustomer"])){
+		header("Location: loginCustomer.php");
+	}
 	$p_location = $_GET["p_location"];
 	$p_type = $_GET["p_type"];
 	$p_category = $_GET["p_category"];
@@ -84,5 +88,7 @@
 		</tbody>
 	</table>
 </div>
+
+<h2 class="text"><img src="images/customersupport.jpg" align="center">Having Trouble? Send us a message    <a href="faqSubmit.php" class="btn-success">Proceed to FAQ</a></h2>
 
 <?php include 'admin_footer.php';?>

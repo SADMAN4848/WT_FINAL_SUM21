@@ -1,5 +1,9 @@
-<?php include 'headers/admin_header_withoutlink.php';
+<?php include 'headers/admin_header.php';
 	require_once 'controllers/CustomerController.php';
+	
+	if(!isset($_SESSION["loggedCustomer"])){
+		header("Location: loginCustomer.php");
+	}
 	$p_id=$_GET["p_id"];
 	$pr=getPropery($p_id);
 	

@@ -19,4 +19,5 @@
 		else{
 			$r_rating = $_POST["r_rating"];
 		}
+		$h_id=$_POST["h_id"];
 		?>

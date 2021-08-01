@@ -1,6 +1,9 @@
-<?php include 'headers/admin_header_withoutlink.php';
+<?php include 'headers/admin_header.php';
 	require_once 'controllers/CustomerController.php';
-	$c_uname = $_GET["c_uname"];
+	if(!isset($_SESSION["loggedCustomer"])){
+		header("Location: loginCustomer.php");
+	}
+	$c_uname=$_SESSION["loggedCustomer"];
 	$pr= getCustomerWithUsername($c_uname);
 	
 ?>

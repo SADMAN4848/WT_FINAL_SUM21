@@ -1,12 +1,16 @@
-<?php include 'headers/admin_header_withoutlink.php';
+<?php include 'headers/admin_header.php';
 	require_once 'controllers/CustomerController.php';
-	$c_uname = $_GET["c_uname"];
+	
+	if(!isset($_SESSION["loggedCustomer"])){
+		header("Location: loginCustomer.php");
+	}
+	$c_uname=$_SESSION["loggedCustomer"];
 	$pr= getCustomerWithUsername($c_uname);
 	
 ?>
-
+<h2 class="textBlue"><img src="images/customersupport.jpg" align="center">Hi <?php echo $pr["c_name"];?>! Welcome to our customer support. </h2>
 <div class="center">
-	<h3 class="text">Search Results</h3>
+	<h2 class="text">Your Queries</h2>
 	<table class="table table-striped">
 		<thead>
 			<th> #No</th>

@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once 'models/db_config.php';
 	$c_name="";
 	$err_c_name="";
@@ -28,6 +29,7 @@
 	$err_r_rating="";
 	$f_details="";
 	$err_f_details="";
+	$h_id="";
 	
 	$hasError=false;
 	$err_db="";
@@ -37,7 +39,8 @@
 		if(!$hasError){
 			
 			if(authenticateCustomer($c_uname,$c_pass)){
-				header("Location: searchProperty.php?c_uname=$c_uname");
+				$_SESSION["loggedCustomer"] =$c_uname;
+				header("Location: searchProperty.php");
 			}
 			$err_db  = "*Username and password invalid";
 		}

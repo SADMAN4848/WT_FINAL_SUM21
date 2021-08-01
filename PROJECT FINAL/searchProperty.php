@@ -1,5 +1,9 @@
 <?php 
-	$c_uname=$_GET["c_uname"];
+	session_start();
+	if(!isset($_SESSION["loggedCustomer"])){
+		header("Location: loginCustomer.php");
+	}
+	$c_uname=$_SESSION["loggedCustomer"];
 	include 'headers/admin_header.php';
 	require_once 'controllers/PropertiesController.php'; 
 	$pr= getCustomerWithUsername($c_uname);
@@ -86,7 +90,7 @@
 	</table>
 </div>
 
-<h2 class="text"><img src="images/customersupport.jpg" align="center">Having Trouble? Send us a message    <a href="faqSubmit.php?c_uname=<?php echo $c_uname ?> " class="btn-success">Proceed to FAQ</a></h2>
+<h2 class="text"><img src="images/customersupport.jpg" align="center">Having Trouble? Send us a message    <a href="faqSubmit.php" class="btn-success">Proceed to FAQ</a></h2>
  
 
 

@@ -1,6 +1,6 @@
 <?php 
 	
-	include 'headers/admin_header_withoutlink.php';
+	include 'headers/admin_header.php';
 	require_once 'controllers/PropertiesController.php'; 
 	
 ?>
