@@ -7,7 +7,7 @@
 	<form action ="" method="post">
 		<div>
 			<h4>Category Name</h4>
-			<input type = "text" name="catName" value="<?php echo $catName;?>">
+			<input type = "text" name="catName" onfocusout = "checkCategory(this)" <?php echo $catName;?>">
 			<span><?php echo $err_catName;?></span>
 		</div>
 		

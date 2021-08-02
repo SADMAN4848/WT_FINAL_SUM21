@@ -174,4 +174,12 @@
 		$rs = get($query);
 		return $rs;
 	}
+	function AjaxUsernameSearch($c_uname){
+		$query = "select c_uname from customer where c_uname='$c_uname'";
+		$rs = get($query);
+		if(count($rs) > 0){
+			return true;
+		}
+		return false;
+	}
 ?> 

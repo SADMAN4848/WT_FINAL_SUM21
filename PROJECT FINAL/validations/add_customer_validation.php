@@ -2,7 +2,7 @@
 	
 	if(empty($_POST["c_name"])){
 			$hasError  = true;
-			$err_c_name = "Username Required";
+			$err_c_name = "*Name Required";
 		}
 		else{
 			$c_name = $_POST["c_name"];
@@ -25,21 +25,21 @@
 		else{
 			$c_pass = $_POST["c_pass"];
 		}
-		if(empty($_POST["c_dob_day"])){
+		if(!isset($_POST["c_dob_day"])){
 			$hasError  = true;
 			$err_c_dob_day = "*Day Required";
 		}
-		else{
+		else{ 
 			$c_dob_day = $_POST["c_dob_day"];
 		}
-		if(empty($_POST["c_dob_month"])){
+		if(!isset($_POST["c_dob_month"])){
 			$hasError  = true;
 			$err_c_dob_month = "*Month Required";
 		}
 		else{
 			$c_dob_month = $_POST["c_dob_month"];
 		}
-		if(empty($_POST["c_dob_year"])){
+		if(!isset($_POST["c_dob_year"])){
 			$hasError  = true;
 			$err_c_dob_year = "*Year Required";
 		}

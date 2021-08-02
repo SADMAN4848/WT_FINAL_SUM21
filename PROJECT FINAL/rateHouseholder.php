@@ -13,7 +13,7 @@
 ?>
 
 <div class="center">
-	<h1 class="text">Rate <?php echo $pr["h_name"];?>!</h1>
+	<h1 class="textBlue">Rate <?php echo $pr["h_name"];?>!</h1>
 	<h5 class="text-danger"><?php echo $err_db;?></h5>
 	<form action="" method="post" class="">
 		<div class="form-group">
@@ -23,12 +23,12 @@
 		
 		<div class="form-group">
 			<h4 class="text">Review Details:</h4> 
-			<input type="text" name="r_details" class="form-control"><span style="color:red"><?php echo $err_r_details; ?></span>
+			<textarea id="r_details"  name="r_details" class="form-control"></textarea><span style="color:red"><?php echo $err_r_details; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Rate Householder:</h4> 
 								<select name="r_rating" >
-								<option>Rate</option>
+								<option selected disabled>Rate</option>
 								<?php
 									for($i=1;$i<=10;$i++){
 										echo "<option>$i</option>";	

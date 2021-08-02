@@ -48,7 +48,7 @@
 	<form action="" method="post" class="">
 		<div class="form-group">
 			<h4 class="text">Your Question:</h4> 
-			<input type="text" name="f_details" class="form-control"><span style="color:red"><?php echo $err_f_details; ?></span>
+			<textarea id="f_details" name="f_details" class="form-control"></textarea><span style="color:red"><?php echo $err_f_details; ?></span>
 		</div>
 		
 		

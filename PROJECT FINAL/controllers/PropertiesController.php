@@ -9,19 +9,16 @@ $p_category="";
 $err_p_category="";
 $p_location="";
 $err_p_location="";
+
 $hasError=false;
 $err_db="";
 
 	if(isset($_POST["btn_search"])){
-		if(empty($_POST["p_location"])){
-			$hasError  = true;
-			$err_p_location = "*Location Required";
-		}
-		else{
-			$p_location = $_POST["p_location"];
-		}
+		require 'validations/searchPropertyValidation.php'; 
+		
 		if(!$hasError){
 			if(searchProperties($p_location,$_POST["p_type"],$_POST["p_category"])){
+				setcookie("searchhistory",$p_location,time()+60);
 			$p_type=$_POST["p_type"];
 			$p_category=$_POST["p_category"];	
 			header("Location: searchResultProperty.php?p_location=$p_location&p_type=$p_type&p_category=$p_category");
@@ -65,5 +62,11 @@ $err_db="";
 		$query="select * from customer where c_uname='$c_uname'";
 		$rs = get($query);
 		return $rs[0];
+	}
+	
+	function AjaxSearch($key){
+		$query = "select * from properties where p_location like '%$key%'";
+		$rs = get($query);
+		return $rs;
 	}
 ?>

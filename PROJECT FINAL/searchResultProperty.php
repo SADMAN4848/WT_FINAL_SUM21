@@ -10,7 +10,7 @@
 ?>
 
 <div class="center">
-	<h3 class="text">Search Results</h3>
+	<h3 class="textNewBlue">Search Results</h3>
 	<table class="table table-striped">
 		<thead>
 			<th> #No</th>
@@ -50,7 +50,7 @@
 	</table>
 </div>
 <div class="center">
-	<h2 class="text">Top charts</h2>
+	<h2 class="textNewBlue">Top charts</h2>
 	<table class="table table-stripped">
 		<thead>
 			<th> #No</th>

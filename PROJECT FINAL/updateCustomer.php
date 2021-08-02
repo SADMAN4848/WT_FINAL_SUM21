@@ -8,6 +8,8 @@
 	
 ?>
 
+<script src ="javaScripts/username.js"></script>
+
 <div class="center">
 <h1 class="text">Update Your Profile</h1>
 	<h5 class="text-danger"><?php echo $err_db;?></h5>
@@ -19,7 +21,7 @@
 		
 		<div class="form-group">
 			<h4 class="text">Username:</h4> 
-			<input type="text" name="c_uname" class="form-control" value ="<?php echo $pr["c_uname"];?>"><span style="color:red"><?php echo $err_c_uname; ?></span>
+			<input type="text" name="c_uname" class="form-control" onfocusout="AjaxUsernameSearch(this)" value ="<?php echo $pr["c_uname"];?>"><span id="err_c_uname" style="color:red"><?php echo $err_c_uname; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Password:</h4> 
@@ -29,7 +31,7 @@
 		<div class="form-group">
 			<h4 class="text">Date of Birth:</h4> 
 			<select name="c_dob_day" >
-								<option>Day</option>
+								<option selected disabled>Day</option>
 								<?php
 									for($i=1;$i<=31;$i++){
 										echo "<option>$i</option>";	
@@ -38,7 +40,7 @@
 								</select><span style="color:red"><?php echo $err_c_dob_day; ?></span>
 							
 							<select name="c_dob_month">
-								<option>Month</option>
+								<option selected disabled>Month</option>
 								
 								<?php
 								$months = array("January","February","March","April","May","June","July","August","September","October","November","December");
@@ -53,7 +55,7 @@
 							
 							
                             <select name="c_dob_year">
-								<option>Year</option>
+								<option selected disabled>Year</option>
 								
 								<?php
 									for($i=1990;$i<=2021;$i++){
@@ -74,7 +76,7 @@
 		
 		<div class="form-group">
 			<h4 class="text">Address:</h4> 
-			<input type="text" name="c_address" class="form-control" value ="<?php echo $pr["c_address"];?>"><span style="color:red"><?php echo $err_c_address; ?></span>
+			<textarea id="c_address" name="c_address" class="form-control" value ="<?php echo $pr["c_address"];?>"></textarea><span style="color:red"><?php echo $err_c_address; ?></span>
 		</div>
 		
 		<div class="form-group">

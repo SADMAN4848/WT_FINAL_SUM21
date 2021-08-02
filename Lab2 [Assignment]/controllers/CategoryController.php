@@ -64,5 +64,13 @@
 		return execute($query);
 	}
 	
+	function checkCategory($catName){
+	$query = "select catName from category where catName='$catName'";
+	$rs= get($query);
+	if(count($rs)>0){
+		return true;
+		}
+	return false;
 	
+	}
 ?>
