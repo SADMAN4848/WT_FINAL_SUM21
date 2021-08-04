@@ -4,7 +4,9 @@
 ?>
 
 <div class="center-login">
+
 	<h1 class="text">Customer Login</h1>
+	
 	<h5><?php echo $err_db;?></h5>
 	<form action="" method="post" class="form-horizontal form-material">
 		<div class="form-group">

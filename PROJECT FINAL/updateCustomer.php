@@ -9,35 +9,40 @@
 ?>
 
 <script src ="javaScripts/username.js"></script>
+<script src ="javaScripts/updateProfile.js"></script>
 
+
+  
 <div class="center">
-<h1 class="text">Update Your Profile</h1>
+<img src="images/signIn.png">
+<h1 class="textBlue">Update Your Profile</h1>
 	<h5 class="text-danger"><?php echo $err_db;?></h5>
-	<form action="" method="post" class="">
+	<form action="" method="post" class="" onsubmit="return validate()">
 		<div class="form-group">
 			<h4 class="text">Name:</h4> 
-			<input type="text" name="c_name" class="form-control" value ="<?php echo $pr["c_name"];?>"><span style="color:red"><?php echo $err_c_name; ?></span>
+			<input id="c_name" type="text" name="c_name" class="form-control" value ="<?php echo $pr["c_name"];?>"><span id="err_c_name" style="color:red"><?php echo $err_c_name; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Username:</h4> 
-			<input type="text" name="c_uname" class="form-control" onfocusout="AjaxUsernameSearch(this)" value ="<?php echo $pr["c_uname"];?>"><span id="err_c_uname" style="color:red"><?php echo $err_c_uname; ?></span>
+			<input id="c_uname" type="text" name="c_uname" class="form-control" onfocusout="AjaxUsernameSearch(this)" value ="<?php echo $pr["c_uname"];?>"><span id="err_c_uname" id="err_c_uname" style="color:red"><?php echo $err_c_uname; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Password:</h4> 
-			<input type="password" name="c_pass" class="form-control" value ="<?php echo $pr["c_pass"];?>"><span style="color:red"><?php echo $err_c_pass; ?></span>
+			<input id="c_pass" type="password" name="c_pass" class="form-control" value ="<?php echo $pr["c_pass"];?>"><span id="err_c_pass" style="color:red"><?php echo $err_c_pass; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Date of Birth:</h4> 
-			<select name="c_dob_day" >
+							<select id="c_dob_day" name="c_dob_day" value="<?php echo $pr["c_dob_day"];?>">
 								<option selected disabled>Day</option>
 								<?php
 									for($i=1;$i<=31;$i++){
-										echo "<option>$i</option>";	
-									}
+										echo "<option value='$i'"; if($pr["c_dob_day"]==$i){ echo "selected";}echo ">$i  </option>";
+
+										}
 								?>
-								</select><span style="color:red"><?php echo $err_c_dob_day; ?></span>
+								</select><span id="err_c_dob_day" style="color:red"><?php echo $err_c_dob_day; ?></span>
 							
 							<select name="c_dob_month">
 								<option selected disabled>Month</option>
@@ -45,48 +50,55 @@
 								<?php
 								$months = array("January","February","March","April","May","June","July","August","September","October","November","December");
 								foreach($months as $m){
-									if($m == $month)
-										echo "<option selected>$m</option>";
-									else
-										echo "<option>$m</option>";
-								}
-							?>
-							</select><span style="color:red"><?php echo $err_c_dob_month; ?></span>
+									echo "<option value='$m'"; if($pr["c_dob_month"]==$m){ echo "selected";}echo ">$m  </option>";
+									}
+								?>
+							</select><span id="err_c_dob_month" style="color:red"><?php echo $err_c_dob_month; ?></span>
 							
 							
                             <select name="c_dob_year">
 								<option selected disabled>Year</option>
 								
 								<?php
-									for($i=1990;$i<=2021;$i++){
-										echo "<option>$i</option>";	
-									}
+									for($i=1980;$i<=2021;$i++){
+										echo "<option value='$i'"; if($pr["c_dob_year"]==$i){ echo "selected";}echo ">$i  </option>";
+
+										}
 								?>
-							</select><span style="color:red"><?php echo $err_c_dob_year; ?></span>
+							</select><span id="err_c_dob_year" style="color:red"><?php echo $err_c_dob_year; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Gender:</h4> 
-			<input type="radio" value="Male" name="c_gender">Male<input type="radio" value="Female" name="c_gender">Female<span style="color:red"><?php echo $err_c_gender; ?></span>
-			
+			<input id="c_gender" type="radio" value="Male" name="c_gender"
+			<?php 
+				if($pr["c_gender"] =="Male"){
+					echo "checked";
+				}?>>Male 
+			<input type="radio" value="Female" name="c_gender"
+			<?php 
+				if($pr["c_gender"] =="Female"){
+					echo "checked";
+				}?>>Female<span id="err_c_gender" style="color:red"><?php echo $err_c_gender; ?></span>
 		</div>
+		
 		<div class="form-group">
 			<h4 class="text">Email:</h4> 
-			<input type="text" name="c_email" class="form-control" value ="<?php echo $pr["c_email"];?>"><span style="color:red"><?php echo $err_c_email; ?></span>
+			<input id="c_email" type="text" name="c_email" class="form-control" value ="<?php echo $pr["c_email"];?>"><span id="err_c_email" style="color:red"><?php echo $err_c_email; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Address:</h4> 
-			<textarea id="c_address" name="c_address" class="form-control" value ="<?php echo $pr["c_address"];?>"></textarea><span style="color:red"><?php echo $err_c_address; ?></span>
+			<textarea id="c_address " name="c_address" class="form-control " rows="5" value ="<?php echo $pr["c_address"];?>"><?php echo $pr["c_address"];?></textarea><span id="err_c_address" style="color:red"><?php echo $err_c_address; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">Phone No:</h4> 
-			<input type="text" name="c_phone" class="form-control" value ="<?php echo $pr["c_phone"];?>"><span style="color:red"><?php echo $err_c_phone; ?></span>
+			<input id="c_phone" type="text" name="c_phone" class="form-control" value ="<?php echo $pr["c_phone"];?>"><span id="err_c_phone" style="color:red"><?php echo $err_c_phone; ?></span>
 		</div>
 		
 		<div class="form-group">
 			<h4 class="text">NID No:</h4> 
-			<input type="text" name="c_nid" class="form-control" value ="<?php echo $pr["c_nid"];?>"><span style="color:red"><?php echo $err_c_nid; ?></span>
+			<input id="c_nid" type="text" name="c_nid" class="form-control" value ="<?php echo $pr["c_nid"];?>"><span id="err_c_nid" style="color:red"><?php echo $err_c_nid; ?></span>
 		</div>
 		<div class="form-group">
 			<input type="hidden" name="c_id" class="form-control" value ="<?php echo $pr["c_id"];?>">

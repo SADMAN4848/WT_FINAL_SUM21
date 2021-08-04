@@ -1,4 +1,4 @@
-<?php include 'headers/admin_header_withoutlink.php';
+<?php include 'headers/homepage_header.php';
 ?>  
 <html>
 

@@ -5,13 +5,11 @@
 	}
 	include 'headers/admin_header.php';
 	require_once 'controllers/PropertiesController.php'; 
-	
-	
 ?>
 
 <div class="center">
-	<h2 class="text">Top charts</h2>
-	<table class="table table-stripped">
+	<h1 class="textNewBlue">Top charts</h1>
+	<table class="table">
 		<thead>
 			<th> #No</th>
 			<th> Photo</th>

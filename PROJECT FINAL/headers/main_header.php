@@ -4,6 +4,7 @@
 		
 		<link rel="stylesheet" href="styles/mystyle.css">
 	</head>
+	<body style="background-color:#d3d5eb;">
 	<body>
 	
 		

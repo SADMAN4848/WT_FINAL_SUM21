@@ -6,6 +6,6 @@ if(!isset($_SESSION["loggedCustomer"])){
 ?>
 
 <div class="center">
-  <center> <img src="images/ProfileUpdated.jpg"></center>
+  <center> <img src="images/ProfileUpdated.png"></center>
   </div>
 <?php include 'admin_footer.php';?>

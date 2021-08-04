@@ -12,12 +12,14 @@
 
 <h2 class="textBlue"><img src="images/login.png" align="center"> Welcome Back <?php echo $pr["c_name"];?>!</h2>
 <div class="center">
+
+<center><img src="images/citynight.jpg" align="center"></center><br>
 	<form action="" method="post">
 		<div class="form-group">
 			<h2 class="textNewBlue">Search Property</h2>
-			<input type="text" placeholder="Location" name="p_location" onkeyup="searchLocation(this)" class="form-control">
+			<input type="text" placeholder="Location" name="p_location" onkeyup="searchLocation(this)" class="form-control" style="padding: 8px 10px;">
 			
-			<select name="p_type">
+			<select name="p_type" class="selectbox">
 			<option selected disabled>Select type</option>
 								
 			<?php
@@ -30,7 +32,7 @@
 								}
 			?>
 			</select>
-			<select name="p_category">
+			<select name="p_category" class="selectbox">
 			<option selected disabled>Select categoty</option>
 								
 			<?php
@@ -100,7 +102,7 @@
 	</table>
 </div>
 
-<h2 class="text"><img src="images/customersupport.jpg" align="center">Having Trouble? Send us a message    <a href="faqSubmit.php" class="btn-success">Proceed to FAQ</a></h2>
+<h2 class="textNewBlue"><img src="images/customersupport.png" align="center">Having Trouble? Send us a message    <a href="faqSubmit.php" class="btn-success">Proceed to FAQ</a></h2>
  
 <script src ="javaScripts/locations.js"></script>
 

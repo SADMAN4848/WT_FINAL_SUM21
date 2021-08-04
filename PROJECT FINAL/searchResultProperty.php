@@ -11,7 +11,7 @@
 
 <div class="center">
 	<h3 class="textNewBlue">Search Results</h3>
-	<table class="table table-striped">
+	<table class="table">
 		<thead>
 			<th> #No</th>
 			<th> Photo</th>

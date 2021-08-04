@@ -1,6 +1,6 @@
 <?php 
 	
-	include 'headers/admin_header.php';
+	include 'headers/homepage_header.php';
 	require_once 'controllers/PropertiesController.php'; 
 	
 ?>

@@ -1,4 +1,4 @@
-<?php include 'headers/admin_header_withoutlink.php';
+<?php include 'headers/homepage_header.php';
 ?>  
 <html>
 
@@ -9,7 +9,7 @@
 	</head>
 	
 	<body>
-	<center><img src="images/Signin.jpg" align="center"></center>
+	<center><img src="images/Signin.png" align="center"></center>
 	
 	
 	<center><h3><a href="loginCustomer.php" class="btn-success">Sign in as Customer</a></h3></center>

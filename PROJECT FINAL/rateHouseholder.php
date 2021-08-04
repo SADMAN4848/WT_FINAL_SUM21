@@ -13,6 +13,7 @@
 ?>
 
 <div class="center">
+	<img src="images/rate.png" align="center">
 	<h1 class="textBlue">Rate <?php echo $pr["h_name"];?>!</h1>
 	<h5 class="text-danger"><?php echo $err_db;?></h5>
 	<form action="" method="post" class="">

@@ -10,7 +10,8 @@
 ?>
 
 <div class="center">
-	<h2 class="text">Confirm Booking? Varify your identity to continue.</h2>
+	<img src="images/bookingpage.png" align="center">
+	<h2 class="textBlue">Confirm Booking? Varify your identity to continue.</h2>
 	<h5 class="text"><?php echo $err_db;?></h5>
 	<form action="" method="post" enctype="multipart/form-data" class="form-horizontal form-material">
 		<div class="">

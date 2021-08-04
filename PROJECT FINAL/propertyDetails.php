@@ -8,9 +8,9 @@
 ?>
 
 <div class="center">
-	<center><h3 class="text">Property Details</h3>
+	<center><h1 class="textBlue">Property Details</h1>
 			
-		</thead>
+		<h3 class="textNewBlue"></thead>
 		<center><tbody>
 			<?php
 				$properties = getPropertyDetails($p_id);
@@ -20,6 +20,7 @@
 						echo "<img src='".$p["p_photo"]."'";
 						echo"<br><br><br><br>";
 						echo "Property Type: "; echo $p["p_type"]; echo"<br>";
+						echo "Category: "; echo $p["p_category"]; echo"<br>";
 						echo "Area: ";echo $p["p_area"];echo"<br>";
 						echo "Location: ";echo $p["p_location"];echo"<br>";
 						echo "Price: ";echo $p["p_price"];echo"<br>";
@@ -33,7 +34,7 @@
 				}
 			?>
 			
-		</tbody></center>
+		</tbody></center></h3>
 	</table>
-</div>
+</div><br><br><br><br><br><br><br><br><br><br><br>
 <?php include 'admin_footer.php';?>

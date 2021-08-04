@@ -4,83 +4,7 @@
 	
 ?>
 <script src ="javaScripts/username.js"></script>
-	<script>
-		var hasError=false;
-		function get(id){
-			return document.getElementById(id);
-		}
-		
-		
-		function validate(){
-			refresh();
-			if(get("c_name").value == ""){
-				hasError = true;
-				get("err_c_name").innerHTML = "*Name required js";
-			}
-			if(get("c_uname").value == ""){
-				hasError = true;
-				get("err_c_uname").innerHTML = "*Username required";
-			}
-			if(get("c_pass").value == ""){
-				hasError = true;
-				get("err_c_pass").innerHTML = "*Password required";
-			}
-			else if(get("c_pass").value.length <=5){
-				hasError = true;
-				get("err_c_pass").innerHTML = "*Password length must be at least 5";
-			}
-			if(get("c_dob_day").selectedIndex == 0){
-				hasError = true;
-				get("err_c_dob_day").innerHTML = "*Day required";
-			}
-			if(get("c_dob_month").selectedIndex == 0){
-				hasError = true;
-				get("err_c_dob_month").innerHTML = "*Month required";
-			}
-			if(get("c_dob_year").selectedIndex == 0){
-				hasError = true;
-				get("err_c_dob_year").innerHTML = "*Year required";
-			}
-			if(!get("male").checked && !get("female").checked){
-				hasError = true;
-				get("err_c_gender").innerHTML = "*Gender required";
-			}
-			if(get("c_email").value == ""){
-				hasError = true;
-				get("err_c_email").innerHTML = "*Email required";
-			}
-			if(get("c_address").value == ""){
-				hasError = true;
-				get("err_c_address").innerHTML = "*Address required";
-			}
-			
-			if(get("c_phone").value==""){
-				hasError = true;
-				get("err_c_phone").innerHTML = "*Phone required";
-			}
-			if(get("c_nid").value==""){
-				hasError = true;
-				get("err_c_nid").innerHTML = "*NID no required";
-			}
-			
-			
-			return !hasError;
-		}
-		function refresh(){
-			hasError = false;
-			get("err_c_name").innerHTML ="";
-			get("err_c_uname").innerHTML ="";
-			get("err_c_pass").innerHTML ="";
-			get("err_c_dob_day").innerHTML="";
-			get("err_c_dob_month").innerHTML = "";
-			get("err_c_dob_year").innerHTML = "";
-			get("err_c_gender").innerHTML = "";
-			get("err_c_email").innerHTML = "";
-			get("err_c_address").innerHTML = "";
-			get("err_c_phone").innerHTML = "";
-			get("err_c_nid").innerHTML = "";
-		}
-	</script>
+<script src ="javaScripts/addcustomer.js"></script>	
 <body>
 <div class="center">
 <h1 class="text">Customer Registration</h1>
@@ -109,7 +33,7 @@
 										echo "<option>$i</option>";	
 									}
 								?>
-								</select><span id="err_c_dob_day" style="color:red"><?php echo $err_c_dob_day; ?></span>
+								</select><span id="err_c_dob_day"style="color:red"><?php echo $err_c_dob_day; ?></span>
 							
 							<select id="c_dob_month" name="c_dob_month">
 								<option selected disabled>Month</option>
@@ -138,7 +62,7 @@
 		</div>
 		<div class="form-group">
 			<h4 class="text">Gender:</h4> 
-			<input id="male" type="radio" value="Male" name="c_gender">Male<input id="female"type="radio" value="Female" name="c_gender">Female<span  id="err_gender" style="color:red"><?php echo $err_c_gender; ?></span>
+			<input id="male" type="radio" value="Male" name="c_gender">Male<input id="female"type="radio" value="Female" name="c_gender">Female<span  id="err_c_gender" style="color:red"><?php echo $err_c_gender; ?></span>
 		</div>
 		<div class="form-group">
 			<h4 class="text">Email:</h4> 

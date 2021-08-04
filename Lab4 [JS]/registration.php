@@ -2,9 +2,9 @@
 	<head></head>
 	<body>
 	<script>
-	var string1 = "demo";
-    var intvalue = 30;
-    alert( string1 + intvalue );
+	var s1 = '123';
+var s2 = 123;
+alert(s1+s2);
 	</script>
 		<form>
 			<input id="uname" onkeyup="writeOp(this)" type="text" placeholder="Username"><br>

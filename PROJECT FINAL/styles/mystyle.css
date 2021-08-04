@@ -41,6 +41,13 @@ body{
 	
 	
 }
+.selectbox{
+  color: blue;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  
+}
+
 .text{
 	font-family:arial;
 	color:grey;
@@ -97,8 +104,8 @@ body{
 				color:white;
 				padding-left:10px;
 				padding-right:10px;
-				padding-top:6px;
-				padding-bottom:6px;
+				padding-top:8px;
+				padding-bottom:10px;
 				text-decoration:none;
 				border-radius:3px;
 			}
