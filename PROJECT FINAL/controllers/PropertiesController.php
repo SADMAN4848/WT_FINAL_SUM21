@@ -69,4 +69,12 @@ $err_db="";
 		$rs = get($query);
 		return $rs;
 	}
+	
+	function bookingHistory($c_uname){
+		$query= "select properties.*, householder.h_name from properties left join householder on properties.h_id=householder.h_id where c_uname='$c_uname'";
+		
+		$rs = get($query);
+		return $rs;
+	}
+	
 ?>

@@ -72,6 +72,14 @@ body{
 	
 }	
 
+.aboutUs{
+	margin: 0 auto;
+    width:50% ;
+	padding:20px;	
+	font-family:arial;
+	color:#03256C;
+}
+
 .center-login{
 	position: absolute;
 	left: 50%;
@@ -109,7 +117,28 @@ body{
 				text-decoration:none;
 				border-radius:3px;
 			}
-			
+.btn-red{	background-color:#d90b0b;
+				font-family:calibri;
+				color:white;
+				padding-left:20px;
+				padding-right:20px;
+				padding-top:8px;
+				padding-bottom:8px;
+				text-decoration:none;
+				border-radius:6px;
+	
+	}	
+.btn-green{	background-color:#0eb51a;
+				font-family:calibri;
+				color:white;
+				padding-left:20px;
+				padding-right:20px;
+				padding-top:8px;
+				padding-bottom:8px;
+				text-decoration:none;
+				border-radius:6px;
+	
+	}	
 		
 
 

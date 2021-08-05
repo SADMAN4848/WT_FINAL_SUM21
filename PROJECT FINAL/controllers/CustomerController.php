@@ -108,6 +108,18 @@
 		}
 	}
 	
+	elseif(isset($_POST["cancel_booking"])){
+		
+		
+		
+		$rs = cancelBooking($_POST["p_id"]);
+		if($rs === true){
+			header("Location: bookingHistory.php");
+		}
+		echo $err_db = $rs;
+		}
+	
+	
 	function insertCustomer($c_name,$c_uname,$u_pass,$c_dob_day,$c_dob_month,$c_dob_year,$c_gender,$c_email,$c_address,$c_phone,$c_nid){
 		$query="insert into customer values (NULL,'$c_name','$c_uname','$u_pass','$c_dob_day','$c_dob_month','$c_dob_year','$c_gender','$c_email','$c_address','$c_phone','$c_nid')";
 		
@@ -181,5 +193,11 @@
 			return true;
 		}
 		return false;
+	}
+	
+	
+	function cancelBooking($p_id){
+		$query="UPDATE properties set c_uname=NULL where p_id='$p_id'";
+		return execute($query);
 	}
 ?> 
