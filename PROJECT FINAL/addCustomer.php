@@ -7,7 +7,7 @@
 <script src ="javaScripts/addcustomer.js"></script>	
 <body>
 <div class="center">
-<h1 class="text">Customer Registration</h1>
+<h1 class="textNewBlue">Customer Registration</h1>
 	<h5 class="text-danger"><?php echo $err_db;?></h5>
 	<form action="" method="post" class="" onsubmit="return validate()">
 		<div class="form-group">

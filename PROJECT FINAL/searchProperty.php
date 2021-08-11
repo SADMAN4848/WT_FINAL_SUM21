@@ -61,6 +61,13 @@
 				?></h4>
 	</form>
 </div>
+<div class="center">
+			<button id="btn_all" onclick="viewGForm()" class="btn-success" style="padding: 8px 10px;">Search from everything</button>
+			<form id="all_search" style="display:none;">
+			<input type ="text" style="padding: 8px 10px;" placeholder="Search..." onkeyup="searchAll(this)"><br>
+			</form>
+			<h4><div id="searchResultAll"></div></h4>
+</div>
 
 <div class="center">
 	<h2 class="textNewBlue">Top charts</h2>
@@ -105,5 +112,6 @@
 <h2 class="textNewBlue"><img src="images/customersupport.png" align="center">Having Trouble? Send us a message    <a href="faqSubmit.php" class="btn-success">Proceed to FAQ</a></h2>
  
 <script src ="javaScripts/locations.js"></script>
+<script src ="javaScripts/searchFromAll.js"></script>
 
 <?php include 'admin_footer.php';?>

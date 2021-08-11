@@ -69,6 +69,11 @@ $err_db="";
 		$rs = get($query);
 		return $rs;
 	}
+	function AjaxSearchEverything($key){
+		$query = "select * from properties where p_type like '%$key%' or p_category like '%$key%' or p_area like '%$key%' or p_description like '%$key%' or c_uname like '%$key%' or p_location like '%$key%'";
+		$rs = get($query);
+		return $rs;
+	}
 	
 	function bookingHistory($c_uname){
 		$query= "select properties.*, householder.h_name from properties left join householder on properties.h_id=householder.h_id where c_uname='$c_uname'";

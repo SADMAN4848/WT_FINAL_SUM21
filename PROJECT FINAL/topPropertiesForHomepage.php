@@ -6,7 +6,7 @@
 ?>
 
 <div class="center">
-	<h2 class="text">Top charts</h2>
+	<h1 class="textNewBlue">Top charts</h1>
 	<table class="table table-stripped">
 		<thead>
 			<th> #No</th>

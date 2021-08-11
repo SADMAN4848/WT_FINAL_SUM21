@@ -1,5 +1,5 @@
 <?php include 'headers/homepage_header.php';
-
+require_once 'controllers/PropertiesController.php'; 
 ?>  
   
 		
@@ -18,30 +18,58 @@
 		<button onclick="pic9()" class="btn-search">9</button>
 		
 		
-		<script src = "javaScripts/myjs.js"></script>
+		<script src = "javaScripts/slideshow.js"></script>
 	</center>
 	</div>
 	
 	<h1 class="textBlue">Get Started!</h1> 						
 			
-			<h3 class="text">New here? <a href="SignupWhere.php" class="btn-success">Sign up</a></h3>
-			<h3 class="text">Already have an account? <a href="SigninWhere.php" class="btn-success">Sign in</a></h3>           
+			<h3 class="textNewBlue">New here? <a href="SignupWhere.php" class="btn-success">Sign up</a></h3>
+			<h3 class="textNewBlue">Already have an account? <a href="SigninWhere.php" class="btn-success">Sign in</a></h3>           
 	
 	
-
+	<div class="center">
+	<h1 class="textNewBlue">Be a member and browse through properties!</h1>
+	<table class="table table-stripped">
+		<thead>
+			<th> #No</th>
+			<th> Photo</th>
+			<th> Type</th>
+			<th> Category</th>
+			<th> Area</th>
+			<th> Location </th>
+			<th> Price</th>
+			<th> Owner Name</th>
+			<th></th>
+			
+		</thead>
+		<tbody>
+			<?php
+				$properties = getProperties();
+				$i=1;
+				foreach($properties as $p){
+					echo "<tr>";
+						echo "<td>$i</td>";
+						echo "<td><img width='180px' height='100px' src='".$p["p_photo"]."'</td>";
+						echo "<td>".$p["p_type"]."</td>";
+						echo "<td>".$p["p_category"]."</td>";
+						echo "<td>".$p["p_area"]."</td>";
+						echo "<td>".$p["p_location"]."</td>";
+						echo "<td>".$p["p_price"]."</td>";
+						echo "<td>".$p["h_name"]."</td><br>";
+						
+						
+					echo "</tr>";
+					$i++;
+				}
+			?>
+			
+		</tbody>
+	</table>
+</div>
 	
-	<h1 style="font-family: Arial">Be a real estate agent!</h1><img src="agent.png" align="center"><h2><a href="http://localhost/WT_D/Lab5[Project]/JobApp.php">Apply here</a></h2><br>
 	
-	<table style="width:100%" border="1">
-			<tr>
-				<td> 
-				<a href="http://localhost/WT_D/Lab5[Project]/Contact_us.php"><h3 style="font-family: Arial">Contact Us</h3></a>
-                </td>
-				<td> 
-				<a href="http://localhost/WT_D/Lab5[Project]/HelpForm.php"><h3 style="font-family: Arial">Help</h3></a>
-                </td>
-            </tr><br>
-			</table><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<h4 style="font-family: Arial">Project By :</h4>
 			<h5 style="font-family: Arial">Md. Sadman Rahman  18-38832-3</h5>
 			<h5 style="font-family: Arial">Niaz Rahman Bhuiyan  18-38770-3</h5>
