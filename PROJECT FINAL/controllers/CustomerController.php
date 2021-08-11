@@ -51,7 +51,7 @@
 		require 'validations/add_customer_validation.php'; 
 		
 		if(!$hasError){
-		$rs = insertCustomer($_POST["c_name"],$_POST["c_uname"],$_POST["c_pass"],$_POST["c_dob_day"],$_POST["c_dob_month"],$_POST["c_dob_year"],$_POST["c_gender"],$_POST["c_email"],$_POST["c_address"],$_POST["c_phone"],$_POST["c_nid"]);
+		$rs = insertCustomer($c_name,$c_uname,$c_pass,$c_dob_day,$c_dob_month,$c_dob_year,$c_gender,$c_email,$c_address,$c_phone,$c_nid);
 		if($rs === true){
 			header("Location: loginCustomer.php");
 		}
@@ -76,7 +76,7 @@
 		require 'validations/login_customer_validation.php';
 		
 		if(!$hasError){
-		$rs = bookproperty($_POST["c_uname"],$_POST["c_pass"],$_POST["p_id"]);
+		$rs = bookproperty($c_uname,$c_pass,$_POST["p_id"]);
 		if($rs === true){
 			header("Location: BookingDone.php");
 		}
@@ -88,7 +88,7 @@
 		require 'validations/update_customer_validation.php';
 		
 		if(!$hasError){
-		$rs = updateCustomer($_POST["c_id"],$_POST["c_name"],$_POST["c_uname"],$_POST["c_pass"],$_POST["c_dob_day"],$_POST["c_dob_month"],$_POST["c_dob_year"],$_POST["c_gender"],$_POST["c_email"],$_POST["c_address"],$_POST["c_phone"],$_POST["c_nid"]);
+		$rs = updateCustomer($c_id,$c_name,$c_uname,$c_pass,$c_dob_day,$c_dob_month,$c_dob_year,$c_gender,$c_email,$c_address,$c_phone,$c_nid);
 		if($rs === true){
 			header("Location: ProfileUpdated.php");
 		}
@@ -100,7 +100,7 @@
 		require 'validations/faq_validation.php'; 
 		
 		if(!$hasError){
-		$rs = submitFaq($_POST["f_details"],$_POST["c_id"]);
+		$rs = submitFaq($f_details,$_POST["c_id"]);
 		if($rs === true){
 			header("Location: FaqSubmitted.php");
 		}
