@@ -21,7 +21,7 @@
   
   <li><a href="HOMEPAGE.php" class="btn btn-warning">Homepage</a></li>
   <li><a href="topPropertiesForHomepage.php" class="btn btn-warning">Top Properties</a></li>
-  <li><a href="loginCustomer.php" class="btn btn-warning">Sign In</a></li>
+  <li><a href="SigninWhere.php" class="btn btn-warning">Sign In</a></li>
   <li><a href="AboutUsHomepage.php" class="btn btn-warning">About us</a></li>
   
  </ul>

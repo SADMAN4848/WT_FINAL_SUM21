@@ -1,5 +1,5 @@
 <?php
-	
+	$c_id= $_POST["c_id"];
 	if(empty($_POST["c_name"])){
 			$hasError  = true;
 			$err_c_name = "Username Required";
@@ -58,7 +58,16 @@
 			$err_c_email = "*Email Required";
 		}
 		else{
-			$c_email = $_POST["c_email"];
+        $s=strpos($_POST["c_email"],"@");
+        if($s!=false){
+            $t=strpos($_POST["c_email"],".", $s+1);
+            if($t!=false){
+            $c_email=$_POST["c_email"];
+            }
+            else{
+            $err_c_email="*Invalid email";
+                }
+        }
 		}
 		if(empty($_POST["c_address"])){
 			$hasError  = true;
@@ -71,6 +80,9 @@
 			$hasError  = true;
 			$err_c_phone = "*Phone no Required";
 		}
+		elseif(is_numeric($_POST["c_phone"])==false){
+			$err_c_phone="*Please enter only numbers";
+        }
 		else{
 			$c_phone = $_POST["c_phone"];
 		}

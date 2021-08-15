@@ -86,7 +86,6 @@
 	
 	elseif(isset($_POST["update_customer"])){
 		require 'validations/update_customer_validation.php';
-		
 		if(!$hasError){
 		$rs = updateCustomer($c_id,$c_name,$c_uname,$c_pass,$c_dob_day,$c_dob_month,$c_dob_year,$c_gender,$c_email,$c_address,$c_phone,$c_nid);
 		if($rs === true){
