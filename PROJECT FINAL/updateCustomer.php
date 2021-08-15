@@ -16,24 +16,24 @@
 <div class="center">
 <img src="images/signIn.png">
 <h1 class="textBlue">Update Your Profile</h1>
-	<h5 class="text-danger"><?php echo $err_db;?></h5>
+	<h5><?php echo $err_db;?></h5>
 	<form action="" method="post" class="" onsubmit="return validate()">
 		<div class="form-group">
-			<h4 class="text">Name:</h4> 
+			<h4 class="textBlue">Name:</h4> 
 			<input id="c_name" type="text" name="c_name" class="form-control" value ="<?php echo $pr["c_name"];?>"><span id="err_c_name" style="color:red"><?php echo $err_c_name; ?></span>
 		</div>
 		
-		<div class="form-group">
-			<h4 class="text">Username:</h4> 
+		<div>
+			<h4 class="textBlue">Username:</h4> 
 			<input id="c_uname" type="text" name="c_uname" class="form-control" onfocusout="AjaxUsernameSearch(this)" value ="<?php echo $pr["c_uname"];?>"><span id="err_c_uname" id="err_c_uname" style="color:red"><?php echo $err_c_uname; ?></span>
 		</div>
-		<div class="form-group">
-			<h4 class="text">Password:</h4> 
+		<div>
+			<h4 class="textBlue">Password:</h4> 
 			<input id="c_pass" type="password" name="c_pass" class="form-control" value ="<?php echo $pr["c_pass"];?>"><span id="err_c_pass" style="color:red"><?php echo $err_c_pass; ?></span>
 		</div>
 		
-		<div class="form-group">
-			<h4 class="text">Date of Birth:</h4> 
+		<div>
+			<h4 class="textBlue">Date of Birth:</h4> 
 							<select id="c_dob_day" name="c_dob_day" value="<?php echo $pr["c_dob_day"];?>">
 								<option selected disabled>Day</option>
 								<?php
@@ -67,8 +67,8 @@
 								?>
 							</select><span id="err_c_dob_year" style="color:red"><?php echo $err_c_dob_year; ?></span>
 		</div>
-		<div class="form-group">
-			<h4 class="text">Gender:</h4> 
+		<div>
+			<h4 class="textBlue">Gender:</h4> 
 			<input id="c_gender" type="radio" value="Male" name="c_gender"
 			<?php 
 				if($pr["c_gender"] =="Male"){
@@ -81,30 +81,30 @@
 				}?>>Female<span id="err_c_gender" style="color:red"><?php echo $err_c_gender; ?></span>
 		</div>
 		
-		<div class="form-group">
-			<h4 class="text">Email:</h4> 
+		<div>
+			<h4 class="textBlue">Email:</h4> 
 			<input id="c_email" type="text" name="c_email" class="form-control" value ="<?php echo $pr["c_email"];?>"><span id="err_c_email" style="color:red"><?php echo $err_c_email; ?></span>
 		</div>
 		
-		<div class="form-group">
-			<h4 class="text">Address:</h4> 
+		<div>
+			<h4 class="textBlue">Address:</h4> 
 			<textarea id="c_address " name="c_address" class="form-control " rows="5" value ="<?php echo $pr["c_address"];?>"><?php echo $pr["c_address"];?></textarea><span id="err_c_address" style="color:red"><?php echo $err_c_address; ?></span>
 		</div>
 		
-		<div class="form-group">
-			<h4 class="text">Phone No:</h4> 
+		<div>
+			<h4 class="textBlue">Phone No:</h4> 
 			<input id="c_phone" type="text" name="c_phone" class="form-control" value ="<?php echo $pr["c_phone"];?>"><span id="err_c_phone" style="color:red"><?php echo $err_c_phone; ?></span>
 		</div>
 		
-		<div class="form-group">
-			<h4 class="text">NID No:</h4> 
+		<div>
+			<h4 class="textBlue">NID No:</h4> 
 			<input id="c_nid" type="text" name="c_nid" class="form-control" value ="<?php echo $pr["c_nid"];?>"><span id="err_c_nid" style="color:red"><?php echo $err_c_nid; ?></span>
 		</div>
-		<div class="form-group">
+		<div>
 			<input type="hidden" name="c_id" class="form-control" value ="<?php echo $pr["c_id"];?>">
 		</div>
 		<br>
-		<div class="form-group text-center">
+		<div>
 			
 			<input type="submit" name="update_customer" class="btn-success" value="Update" class="form-control">
 		</div>

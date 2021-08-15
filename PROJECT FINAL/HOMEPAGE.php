@@ -39,7 +39,6 @@ require_once 'controllers/PropertiesController.php';
 			<th> Area</th>
 			<th> Location </th>
 			<th> Price</th>
-			<th> Owner Name</th>
 			<th></th>
 			
 		</thead>
@@ -56,7 +55,7 @@ require_once 'controllers/PropertiesController.php';
 						echo "<td>".$p["p_area"]."</td>";
 						echo "<td>".$p["p_location"]."</td>";
 						echo "<td>".$p["p_price"]."</td>";
-						echo "<td>".$p["h_name"]."</td><br>";
+						
 						
 						
 					echo "</tr>";

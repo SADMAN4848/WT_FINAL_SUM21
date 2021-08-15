@@ -15,7 +15,7 @@
 
 <center><img src="images/citynight.jpg" align="center"></center><br>
 	<form action="" method="post">
-		<div class="form-group">
+		<div>
 			<h2 class="textNewBlue">Search Property</h2>
 			<input type="text" placeholder="Location" name="p_location" onkeyup="searchLocation(this)" class="form-control" style="padding: 8px 10px;">
 			
@@ -54,7 +54,7 @@
 			<span style="color:red"><?php echo $err_p_type; ?></span>
 			<span style="color:red"><?php echo $err_p_category; ?></span>
 		</div>
-		<h4 class="text">Most recent searched location : <?php if(!isset($_COOKIE["searchhistory"])){
+		<h4 class="textBlue">Most recent searched location : <?php if(!isset($_COOKIE["searchhistory"])){
 				echo "No search found";
 				}
 				else echo $_COOKIE["searchhistory"];
@@ -70,7 +70,7 @@
 </div>
 
 <div class="center">
-	<h2 class="textNewBlue">Top charts</h2>
+	<h1 class="textNewBlue">Top charts</h1>
 	<table class="table table-stripped">
 		<thead>
 			<th> #No</th>

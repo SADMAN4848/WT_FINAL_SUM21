@@ -23,11 +23,11 @@
 		</div>
 		
 		<div class="form-group">
-			<h4 class="text">Review Details:</h4> 
+			<h4 class="textNewBlue">Review Details:</h4> 
 			<textarea id="r_details"  name="r_details" class="form-control"></textarea><span style="color:red"><?php echo $err_r_details; ?></span>
 		</div>
 		<div class="form-group">
-			<h4 class="text">Rate Householder:</h4> 
+			<h4 class="textNewBlue">Rate Householder:</h4> 
 								<select name="r_rating" >
 								<option selected disabled>Rate</option>
 								<?php

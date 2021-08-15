@@ -15,11 +15,11 @@
 	<h5 class="text"><?php echo $err_db;?></h5>
 	<form action="" method="post" enctype="multipart/form-data" class="form-horizontal form-material">
 		<div class="">
-			<h4 class="text">Enter Your Username:</h4> 
+			<h4 class="textNewBlue">Enter Your Username:</h4> 
 			<input type="text" name="c_uname" class=""><span style="color:red"><?php echo $err_c_uname; ?></span>
 		</div>
 		<div class="">
-			<h4 class="text">Enter Your Password:</h4> 
+			<h4 class="textNewBlue">Enter Your Password:</h4> 
 			<input type="password" name="c_pass" class=""><span style="color:red"><?php echo $err_c_pass; ?></span>
 		</div>
 		<div>

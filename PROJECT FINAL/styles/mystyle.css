@@ -27,26 +27,16 @@ body{
 	padding:0px;
 	
 }
-.card{
-	border:1px solid black;
-	width:300px; 
-	height:50px;
-	margin-left:10px;
-	margin-right:10px;
-	margin-top:10px;
-	border-radius: 5px;
-	text-align: center;
-	background-color:black;
-	padding:5px;
-	
-	
-}
+
 .selectbox{
   color: blue;
   padding: 8px 10px;
   border: 1px solid transparent;
   
 }
+
+
+
 
 .text{
 	font-family:arial;
